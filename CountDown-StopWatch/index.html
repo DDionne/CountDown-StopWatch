@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Countdown Timer / StopWatch</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/timer.css" rel="stylesheet">
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   		<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/timer.js"></script>
+	</head>
+	<body>
+		<!-- script to enable tooltip for the textbox -->
+		<script>
+			$(document).ready(function () {
+				$('input[id=datetimeEntry]').tooltip({'trigger':'focus', 'title': 'format: YYYY-MM-DD-hh-mm-ss'});
+			});
+		</script>
+
+		<h1 class="text-center">Countdown Timer / StopWatch</h1>
+		
+
+ 		<ul class="nav nav-tabs" role="tablist">
+ 		   	<li role="presentation" class="active"><a href="#countDownTab" aria-controls="countDownTab" role="tab" data-toggle="tab">Date CountDown</a></li>
+   			<li role="presentation"><a href="#stopWatchTab" aria-controls="stopWatchTab" role="tab" data-toggle="tab">StopWatch</a></li>
+  		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="countDownTab">
+				<h2 class="text-center">Countdown Timer</h2>
+				<div id="countdownInputs" class="text-center">
+					<input id="datetimeEntry" class="dateTimeEntry" data-toggle="tooltip" data-placement="top" type="	text" pattern="\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}" value="YYYY-MM-DD-hh-mm-ss"/>
+					<input id="setCountDownDate" type="button" onclick="setDate()" value="Set CountDown"/>
+				</div>
+				<div id="timeDisplay" class="text-center mainTime">
+					000:00:00:000
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="stopWatchTab">
+				<h2 class="text-center">Stopwatch</h2>
+				<h3 class="text-center">Total Time</h3>
+				<div id="stopWatchDisplay" class="text-center mainTime">
+					0:00:00:000
+				</div>
+				<h4 class="text-center">Lap Time</h4>
+				<div id="lapTimeDisplay" class="text-center secondaryTime">
+					0:00:00:000
+				</div>
+				<div class="text-center">
+					<input id="stopWatchAction" onclick="toggleStopWatch()" type="button" value="Start Stopwatch" class="stopWatchButtons"/>
+					<input id="lap_clear" onclick="lapClearFunction()" type="button" value="clear" class="stopWatchButtons"/>
+				</div>
+				<div id="lapsHeader" class="text-center">
+					<table id="laps" align="center" class="table table-striped">
+						<tr>
+							<th>Lab #</th>
+							<th>Total Time</th>
+							<th>Lap Time</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	<!--	<h2 class="text-center">CountDown Timer</h2>
+		<div id="countdownInputs" class="text-center">
+			<input id="datetimeEntry" class="dateTimeEntry" data-toggle="tooltip" data-placement="top" type="	text" pattern="\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}" value="YYYY-MM-DD-hh-mm-ss"/>
+			<input id="setCountDownDate" type="button" onclick="setDate()" value="Set CountDown"/>
+		</div>
+		<div id="timeDisplay" class="text-center mainTime">
+			000:00:00:000
+		</div>
+		<br/>
+		<h2 class="text-center">StopWatch</h2>
+		<div id="stopWatchDisplay" class="text-center mainTime">
+			0:00:00:000
+		</div>
+		<div id="lapTimeDisplay" class="text-center secondaryTime">
+			0:00:00:000
+		</div>
+		<div class="text-center">
+			<input id="stopWatchAction" onclick="toggleStopWatch()" type="button" value="Start Stopwatch" class="stopWatchButtons"/>
+			<input id="lap_clear" onclick="lapClearFunction()" type="button" value="clear" class="stopWatchButtons"/>
+		</div>
+		<div id="lapsHeader" class="text-center">
+			<table id="laps" align="center" class="table table-striped">
+				<tr>
+					<th>Lab #</th>
+					<th>Total Time</th>
+					<th>Lap Time</th>
+				</tr>
+			</table>
+		</div>
+
+		-->
+		
+
+		
+	</body>
+
+</html>

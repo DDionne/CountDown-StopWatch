@@ -1,0 +1,31 @@
+.mainTime {
+	font-size: 80px;
+}
+
+.secondaryTime {
+	font-size: 40px;
+}
+
+#laps {
+	width: 50%;
+}
+
+#countdownInputs {
+	margin-top:20px;
+}
+
+.stopWatchButtons {
+	width:10%;
+}
+
+.dateTimeEntry {
+	width: 200px;
+}
+
+th {
+	text-align: center;
+}
+
+td {
+	text-align: center;
+}
